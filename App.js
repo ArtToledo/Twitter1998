@@ -24,7 +24,10 @@ export default function App() {
             <View style={styles.info}>
               <Text style={styles.titleProfile}>Nike</Text>
               <Text style={styles.message}>Mamba Forever.</Text>
-              <Image style={styles.pubImg} source={{ uri: 'https://pbs.twimg.com/media/EPPfghhU4AAs4pY?format=jpg&name=4096x4096' }} />
+
+              <View style={styles.imagePubBorder}>
+                <Image style={styles.pubImg} source={{ uri: 'https://pbs.twimg.com/media/EPPfghhU4AAs4pY?format=jpg&name=4096x4096' }} />
+              </View>
 
               <View style={styles.buttonsPubs}>
                 <TouchableOpacity style={styles.buttonsPub}>
@@ -46,15 +49,18 @@ export default function App() {
             <View style={styles.info}>
               <Text style={styles.titleProfile}>South America Memes</Text>
               <Text style={styles.message}>oloko</Text>
-              <Video
-                source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
-                rate={1.0}
-                isMuted={true}
-                resizeMode="cover"
-                shouldPlay
-                isLooping
-                style={styles.pubVideo}
-              />
+
+              <View style={styles.imagePubBorder}>
+                <Video
+                  source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+                  rate={1.0}
+                  isMuted={true}
+                  resizeMode="cover"
+                  shouldPlay
+                  isLooping
+                  style={styles.pubVideo}
+                />
+              </View>
 
               <View style={styles.buttonsPubs}>
                 <TouchableOpacity style={styles.buttonsPub}>
@@ -76,7 +82,10 @@ export default function App() {
             <View style={styles.info}>
               <Text style={styles.titleProfile}>McDonald's Brasil</Text>
               <Text style={styles.message}>Sandubão do aniversário de São Paulo</Text>
-              <Image style={styles.pubImg} source={{ uri: 'https://pbs.twimg.com/media/EOwkrdqWkAUTo5-?format=jpg&name=small' }} />
+
+              <View style={styles.imagePubBorder}>
+                <Image style={styles.pubImg} source={{ uri: 'https://pbs.twimg.com/media/EOwkrdqWkAUTo5-?format=jpg&name=small' }} />
+              </View>
 
               <View style={styles.buttonsPubs}>
                 <TouchableOpacity style={styles.buttonsPub}>
@@ -98,8 +107,11 @@ export default function App() {
             <View style={styles.info}>
               <Text style={styles.titleProfile}>Rocketseat</Text>
               <Text style={styles.message}>Rocketseat Experience 2019</Text>
-              <Image style={styles.pubImg} source={{ uri: 'https://lh3.googleusercontent.com/-N1DD9_I5jar9h2XyeQX74OdGFQMsd4bl974PEtkCqWo-6beegoDTADWiarvoFXjfidM' }} />
 
+              <View style={styles.imagePubBorder}>
+                <Image style={styles.pubImg} source={{ uri: 'https://lh3.googleusercontent.com/-N1DD9_I5jar9h2XyeQX74OdGFQMsd4bl974PEtkCqWo-6beegoDTADWiarvoFXjfidM' }} />
+              </View>
+  
               <View style={styles.buttonsPubs}>
                 <TouchableOpacity style={styles.buttonsPub}>
                   <Text style={styles.txtButton}>Comment</Text>
@@ -120,7 +132,10 @@ export default function App() {
             <View style={styles.info}>
               <Text style={styles.titleProfile}>Quero Case</Text>
               <Text style={styles.message}>🍩 HUMM! Bateu uma fome!</Text>
-              <Image style={styles.pubImg} source={{ uri: 'https://pbs.twimg.com/media/EQryIEQXYAozDSD?format=jpg&name=medium' }} />
+
+              <View style={styles.imagePubBorder}>
+                <Image style={styles.pubImg} source={{ uri: 'https://pbs.twimg.com/media/EQryIEQXYAozDSD?format=jpg&name=medium' }} />
+              </View>
 
               <View style={styles.buttonsPubs}>
                 <TouchableOpacity style={styles.buttonsPub}>
@@ -226,16 +241,19 @@ const styles = StyleSheet.create({
   message: {
     fontFamily: 'Roboto'
   },
+  imagePubBorder: {
+    borderWidth: 2,
+    borderTopColor: '#fff',
+    borderStartColor: '#fff',
+  },
   pubImg: {
     resizeMode: 'stretch',
     width: 245,
-    height: 150,
-    borderRadius: 15
+    height: 150
   },
   pubVideo: {
     width: 245,
-    height: 150,
-    borderRadius: 15
+    height: 150
   },
   buttonsPubs: {
     flexDirection: 'row',
